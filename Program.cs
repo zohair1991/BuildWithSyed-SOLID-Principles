@@ -1,15 +1,15 @@
-﻿namespace BuildWithSyed_Solid_Principles
+﻿using BuildWithSyed_OCP;
+using BuildWithSyed_SRP;
+using static BuildWithSyed_OCP.ToyPaintingFactory;
+
+namespace BuildWithSyed_Solid_Principles
 {
-    /* !!!!!!!!!!!!!!!!!!!!!!!!!! SINGLE RESPONSIBILITY PRINCIPLE IS Refactored HERE !!!!!!!!!!!!!!!!!!!!!!!!!! 
-                 The SRP states that a class should have only one reason to change.In this case:
-                 If the logic for toy creation changes, the class will need to change.
-                 If the packing process changes, the class will also need to change.
-                 If the delivery method changes, the class will again need to change. 
-      */
     public class Program
     {
         static void Main(string[] args)
         {
+
+            #region Single Responsibility Principle
             /*  SINGLE RESPONSIBILITY PRINCIPLE */
             //ToyMaker toyMaker = new ToyMaker();
             //ToyPacker toyPacker = new ToyPacker();
@@ -20,6 +20,19 @@
             //toyDelivery.DeliverMyToy();
 
             /*  SINGLE RESPONSIBILITY PRINCIPLE */
+            #endregion
+
+            #region Open Closed Principle
+
+            /*  OPEN CLOSED PRINCIPLE */
+            PaintMyToy blackPainter = new BlackToyPainter();
+            blackPainter.PaintToy("Car");
+
+            PaintMyToy redPainter = new RedToyPainter();
+            redPainter.PaintToy("Bus");
+            /*  OPEN CLOSED PRINCIPLE */
+
+            #endregion
         }
     }
 }

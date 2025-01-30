@@ -1,4 +1,4 @@
-﻿namespace BuildWithSyed_Solid_Principles
+﻿namespace BuildWithSyed_SRP
 {
     /* !!!!!!!!!!!!!!!!!!!!!!!!!! SINGLE RESPONSIBILITY PRINCIPLE IS Refactored HERE !!!!!!!!!!!!!!!!!!!!!!!!!! 
                  The SRP states that a class should have only one reason to change.In this case:
